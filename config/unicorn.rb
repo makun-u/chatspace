@@ -3,9 +3,8 @@ app_path = File.expand_path('../../../', __FILE__)
 
 #アプリケーションサーバの性能を決定する
 worker_processes 1
-working_directory "#{app_path}/current"
 #アプリケーションの設置されているディレクトリを指定
-working_directory app_path
+working_directory "#{app_path}/current"
 pid "#{app_path}/tmp/pids/unicorn.pid"
 listen "#{app_path}/tmp/sockets/unicorn.sock"
 stderr_path "#{app_path}/log/unicorn.stderr.log"
